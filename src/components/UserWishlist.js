@@ -26,18 +26,21 @@ const UserWishlist = props =>
 
 	useEffect(() =>
 	{
+		let isMounted = true;
 		const fetchWishlist = async () =>
 		{
-			setLoading(true);
+			if (isMounted) setLoading(true);
 			const wishlistGames = await loadWishlist();
-			setGames(Object.values(wishlistGames));
+			if (isMounted) setGames(Object.values(wishlistGames));
 			console.log(Object.values(wishlistGames));
 			const currencyExchange = await loadCurrencyExchange();
-			setExchange(currencyExchange);
+			if (isMounted) setExchange(currencyExchange);
 			console.log(currencyExchange);
-			setLoading(false);
+			if (isMounted) setLoading(false);
 		};
 		fetchWishlist();
+
+		return () => isMounted = false;
 	}, []);
 
 	if (loading) return(<Loading/>);
@@ -45,7 +48,7 @@ const UserWishlist = props =>
 		<div className="user-wishlist">
 			{
 				games.length > 1
-					? games.map(game => <div><GameCard info={game} rates={exchange.rates}/></div>)
+					? games.map(game => <div key={game.added}><GameCard info={game} rates={exchange.rates}/></div>)
 					: <div className="wishlist-error">
 						<span>Oops, an error occured!</span>
 						<span>This is because this user doesn't have any games in his wishlist or has set the profile to private</span>

@@ -5,7 +5,7 @@ const Navbar = () =>
 {
 	return(
 		<nav className="navbar">
-			<img className="steam-logo" src={SteamLogo} alt="Steam Logo"></img>
+			<Link to="/" style={{height: "100%", display: "flex", alignItems: "center"}}><img className="steam-logo" src={SteamLogo} alt="Steam Logo"></img></Link>
 			<ul>
 				<Link to="/"><li>Home</li></Link>
 				<Link to="/wishlist">Wishlist</Link>
