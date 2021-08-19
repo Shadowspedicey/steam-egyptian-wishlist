@@ -1,6 +1,6 @@
 .App
 {
-	height: 100%;
+	min-height: 100%;
 	background-color: #1B2838;
 
 	display: flex;
@@ -171,6 +171,120 @@
 	margin-left: 0.5rem;
 }
 
+.user-wishlist
+{
+	width: 85%;
+	height: 100%;
+
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 1.25rem;
+
+	margin: 2rem 0;
+}
+
+.game-card
+{
+	width: 300px;
+	height: 400px;
+	background-color: #161616;
+	box-sizing: border-box;
+	text-align: center;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+
+	padding: 1rem;
+}
+
+.game-img
+{
+	width: 100%;
+}
+
+.game-img img
+{
+	width: 100%;
+}
+
+.game-name
+{
+	color: rgb(195, 195, 195);
+	font-size: 1.5em;
+	font-family: sans-serif;
+	font-weight: 600;
+}
+
+.game-reviews, .game-releasedate
+{
+	width: 90%;
+
+	font-size: 0.875em;
+	font-family: Arial, Helvetica, sans-serif;
+
+	display: flex;
+	justify-content: space-between;
+}
+
+.review
+{
+	color: #A34C25;
+}
+
+.review.positive
+{
+	color: #66C0F4;
+}
+
+.review.mixed
+{
+	color: #B9A074;
+}
+
+.game-releasedate
+{
+	color: #b2b8bd;
+}
+
+.game-pricing
+{
+	display: flex;
+}
+
+.game-discount
+{
+	width: max-content;
+	background-color: #3E5335;
+
+	color: #a4d007;
+	font-size: 2em;
+	font-family: "Liberation Sans";
+
+	padding: 0.75rem;
+}
+
+.game-price
+{
+	width: max-content;
+	background-color: #303C4A;
+
+	color: white;
+	font-size: 2em;
+	font-family: "Liberation Sans";
+
+	padding: 0.75rem;
+}
+
+.game-discounted-price
+{
+	text-decoration: line-through;
+	color: gray;
+
+	margin-right: 1rem;
+}
 
 @keyframes loading
 {

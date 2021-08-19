@@ -18,3 +18,8 @@ html, body
 	font-family: "MollyJack";
 	src: url(./fonts/Molly\ Jack_Regular.ttf);
 }
+
+@font-face {
+	font-family: "Liberation Sans";
+	src: url(./fonts/LiberationSans-Regular.ttf);
+}
