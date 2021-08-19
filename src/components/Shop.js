@@ -7,11 +7,13 @@ import Loading from "./Loading";
 const Shop = () =>
 {
 	const history = useHistory();
+	const [user, setUser] = useState("");
 	const [loading, setLoading] = useState(false);
 
 	const handleInput = e => 
 	{
-		if (e.target.value === "") return;
+		if (e.target.value === "" || e.target.value === user) return;
+		setUser(e.target.value);
 		getUserID(e.target.value);
 	};
 	const getUserID = async input =>
@@ -33,7 +35,7 @@ const Shop = () =>
 
 	return(
 		<div id="shop">
-			<div className="searchbox" style={{width: "50%"}}>
+			<div className="searchbox">
 				<input onBlur={(e) => handleInput(e)}></input>
 			</div>
 			{
