@@ -34,9 +34,9 @@ const Wishlist = () =>
 	const showUser = id => history.push(`/wishlist/${id}`);
 
 	return(
-		<div id="shop">
+		<div id="wishlist">
 			<div className="searchbox">
-				<input onBlur={(e) => handleInput(e)}></input>
+				<input placeholder="Enter ID from profile link" onBlur={(e) => handleInput(e)}></input>
 			</div>
 			{
 				loading 

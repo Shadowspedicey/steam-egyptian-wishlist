@@ -44,9 +44,12 @@ const UserWishlist = props =>
 	return(
 		<div className="user-wishlist">
 			{
-				games.map(game =>
-					<div><GameCard info={game} rates={exchange.rates}/></div>
-				)
+				games.length > 1
+					? games.map(game => <div><GameCard info={game} rates={exchange.rates}/></div>)
+					: <div className="wishlist-error">
+						<span>Oops, an error occured!</span>
+						<span>This is because this user doesn't have any games in his wishlist or has set the profile to private</span>
+					</div>
 			}
 		</div>
 	);
