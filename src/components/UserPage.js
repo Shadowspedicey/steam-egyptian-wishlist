@@ -4,6 +4,7 @@ import { useParams } from "react-router-dom";
 import countries from "alpha2-countries";
 
 import Loading from "./Loading";
+import UserWishlist from "./UserWishlist";
 
 const UserPage = () =>
 {
@@ -62,6 +63,7 @@ const UserPage = () =>
 							: null}
 					</div>
 				</div>
+				<UserWishlist id={params.userID}/>
 			</div>
 		);
 	} else
