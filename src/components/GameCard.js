@@ -2,8 +2,8 @@ const GameCard = props =>
 {
 	return(
 		<div className="game-card">
-			<div className="game-img"><a href={`https://store.steampowered.com/app/${props.info.subs[0] ? props.info.subs[0].id : null}/`}><img src={props.info.capsule} alt={props.info.name}></img></a></div>
-			<span className="game-name">{props.info.name}</span>
+			<div className="game-img"><img src={props.info.capsule} alt={props.info.name}></img></div>
+			<span className="game-name">{unescape(props.info.name)}</span>
 			<div className="game-reviews">
 				<span style={{color: "#b2b8bd"}}>OVERALL REVIEWS:</span>
 				<span className={`review ${props.info.review_css}`}>{props.info.review_desc}</span>

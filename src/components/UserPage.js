@@ -41,7 +41,7 @@ const UserPage = () =>
 			};
 			fetchInfo();
 		}
-	}, []);
+	}, [params.userID]);
 	
 
 	if (info)
@@ -58,7 +58,7 @@ const UserPage = () =>
 							?	
 							<div className="user-location-div">
 								<span className={`flag-icon flag-icon-${info.loccountrycode.toLowerCase()}`}></span>
-								<span className="user-country">{countries.resolveName("EG")}</span>
+								<span className="user-country">{countries.resolveName(`${info.loccountrycode}`)}</span>
 							</div>
 							: null}
 					</div>
@@ -68,7 +68,7 @@ const UserPage = () =>
 		);
 	} else
 	{
-		return(<div className="user-page">No Match</div>);
+		return(<div className="user-page no-match">No Match</div>);
 	}
 };
 

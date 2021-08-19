@@ -74,13 +74,20 @@
 	text-decoration: none;
 }
 
-#shop
+#wishlist
 {
 	height: 100%;
 
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+}
+
+.no-match
+{
+	color: white;
+	font-size: 6em;
+	font-family: "Mollyjack";
 }
 
 .searchbox
@@ -182,6 +189,23 @@
 	gap: 1.25rem;
 
 	margin: 2rem 0;
+}
+
+.wishlist-error
+{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.wishlist-error > span
+{
+	color: white;
+	text-align: center;
+	font-size: 3em;
+	font-family: "Mollyjack";
+
+	margin-bottom: 2rem;
 }
 
 .game-card
