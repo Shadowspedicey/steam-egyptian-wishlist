@@ -3,6 +3,7 @@ import Navbar from "./components/Navbar";
 import Home from "./components/Home";
 import Shop from "./components/Shop";
 import "./App.css";
+import "flag-icon-css/css/flag-icon.min.css";
 
 function App() {
 	return (
