@@ -2,6 +2,9 @@
 {
 	height: 100%;
 	background-color: #1B2838;
+
+	display: flex;
+	flex-direction: column;
 }
 
 .navbar
@@ -69,4 +72,47 @@
 {
 	color: #E3B261;
 	text-decoration: none;
+}
+
+#shop
+{
+	height: 100%;
+
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.searchbox input
+{
+	width: 100%;
+	background-color: #316282;
+
+	color: white;
+	font-size: 4em;
+	font-family: monospace;
+	
+	padding: 0.5rem;
+	margin: 2rem 0;
+}
+
+.loading
+{
+	width: 25%;
+	overflow: hidden;
+}
+
+.loading-img
+{
+	width: 100%;
+	animation: loading 0.5s linear 0s;
+	animation-iteration-count: infinite;
+}
+
+@keyframes loading
+{
+	0%
+	{
+		transform: rotateZ(360deg);
+	}
 }
