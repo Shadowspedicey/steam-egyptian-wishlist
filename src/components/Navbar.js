@@ -8,7 +8,7 @@ const Navbar = () =>
 			<img className="steam-logo" src={SteamLogo} alt="Steam Logo"></img>
 			<ul>
 				<Link to="/"><li>Home</li></Link>
-				<Link to="/shop">Shop</Link>
+				<Link to="/wishlist">Shop</Link>
 			</ul>
 		</nav>
 	);

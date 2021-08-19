@@ -4,7 +4,7 @@ import UserPage from "./UserPage";
 
 import Loading from "./Loading";
 
-const Shop = () =>
+const Wishlist = () =>
 {
 	const history = useHistory();
 	const [user, setUser] = useState("");
@@ -31,7 +31,7 @@ const Shop = () =>
 			console.log(error);
 		}
 	};
-	const showUser = id => history.push(`/shop/${id}`);
+	const showUser = id => history.push(`/wishlist/${id}`);
 
 	return(
 		<div id="shop">
@@ -41,10 +41,10 @@ const Shop = () =>
 			{
 				loading 
 					?	<Loading/>
-					: <Route exact path="/shop/:userID" component={UserPage}></Route>
+					: <Route exact path="/wishlist/:userID" component={UserPage}></Route>
 			}
 		</div>
 	);
 };
 
-export default Shop;
+export default Wishlist;
