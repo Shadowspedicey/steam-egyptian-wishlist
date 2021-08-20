@@ -12,8 +12,8 @@ function App() {
 			<Router>
 				<Navbar/>
 				<Switch>
-					<Route exact path="#/" component={Home}></Route>
-					<Route path="#/wishlist" component={Wishlist}></Route>
+					<Route exact path="/" component={Home}></Route>
+					<Route path="/wishlist" component={Wishlist}></Route>
 				</Switch>
 				<div style={{width: "100%", height: "61.5px"}}></div>
 				<Footer/>
